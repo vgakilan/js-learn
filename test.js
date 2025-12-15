@@ -203,6 +203,8 @@ console.log("Accepted")
 
 */
 
+/*
+
 let i = 10;
 while (i < 20) {
   if (i !== 13) {
@@ -212,3 +214,47 @@ while (i < 20) {
   }
   i++
 }
+
+*/
+
+//Functions
+
+// Treditional function
+
+/*
+
+function greet (name) {
+  return "Hello, " + name + "!"
+}
+
+// let user = "Akilan";
+// console.log(greet(user))
+
+// let user1 = "Don Kiruthika"
+// console.log(greet(user1));
+
+let message = greet("Don")
+console.log(message)
+
+*/
+
+
+/*
+
+function checkAge(age) {
+  if (age >= 18) {
+    return "You're an adult.";
+  } else {
+    return "You're a minor.";
+  }
+}
+
+
+kiruthika_age = 28;
+arya_age = 2;
+
+console.log(`Age is ${arya_age}. So ${checkAge(arya_age)}`);
+
+console.log(`Age is ${kiruthika_age}. So ${checkAge(kiruthika_age)}`);
+
+*/
