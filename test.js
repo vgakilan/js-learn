@@ -258,3 +258,328 @@ console.log(`Age is ${arya_age}. So ${checkAge(arya_age)}`);
 console.log(`Age is ${kiruthika_age}. So ${checkAge(kiruthika_age)}`);
 
 */
+
+/*
+
+function check_age(age) {
+  if(age >= 18)
+    return "You are an adult"
+  return "You are a minor"
+}
+
+console.log(check_age(17));
+
+*/
+
+/*
+
+let addition = function(a, b) {
+  return a + b;
+}
+
+let c = addition(2, 3);
+console.log(c);
+
+*/
+
+/*
+
+let addition = function(a, b) {
+  return a + b;
+}(2, 3)
+
+console.log(addition)
+
+*/
+
+// let x = 5;
+// console.log(x++) //6 but prints 5
+// console.log(++x) //7
+
+/*
+
+// Arrow function
+
+let addition = (a, b) => a + b;
+
+console.log (addition(2, 4))
+
+*/
+
+/*
+
+// defining global variable. 
+
+let a = 20;
+let b = 10;
+
+function addition (b = 12) {
+  return a + b;
+}
+
+console.log(addition())
+
+function subtract(b) {
+  return a - b;
+}
+
+console.log(subtract(12))
+
+*/
+
+// Block scope
+
+/*
+
+let a = 30;
+let b = 40;
+
+{
+  let a = 10;
+  let b = 20;
+}
+{
+  let c = 30;
+  let d = 40;
+}
+
+console.log (a, b)
+
+*/
+
+// closure scope:
+
+// without closure first. 
+
+/*
+
+function increase () {
+  let count = 0;
+  count = count + 1;
+  return count;
+}
+
+console.log(increase())
+console.log(increase())
+
+*/
+
+
+/*
+
+function createIncrease () {
+  let count = 0;
+  
+  return function () {
+    count = count + 1;
+    return count;
+  };
+}
+
+const increase = createIncrease();
+const increase1 = createIncrease();
+
+console.log(increase()) //1
+console.log(increase()) //2
+
+console.log(increase1()) //1
+console.log(increase1()) //2
+
+*/
+
+/*
+
+function createIncrease () {
+  let count = 0;
+  count = count + 1;
+  return count;
+}
+
+const increase = createIncrease();
+
+console.log(increase)
+console.log(increase)
+
+*/
+
+/*
+
+const increase = (function () {
+  let count = 0
+  const nested = function () { return count = count + 1 }
+  return nested
+})()
+
+console.log(increase())
+console.log(increase())
+console.log(increase())
+console.log(increase())
+
+*/
+
+/*
+
+// closure practice
+function addition() {
+  let a = 10;
+  let b = 20;
+  return function () {
+    return a = a + b;
+  }
+}
+
+cl_test = addition()
+cl_test1 = addition()
+
+console.log(cl_test())
+
+console.log(cl_test1())
+
+*/
+
+// class
+
+
+/*
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+
+  bark() {
+    console.log (this.name + " says woof")
+  }
+
+  run() {
+    console.log(this.name + " runs")
+  }
+}
+
+const a = new Dog("Kabali");
+const b = new Dog("Kiruthika");
+const c = new Dog("Akilan");
+const d = new Dog("Vesha Poochi");
+
+
+
+
+a.bark()
+a.run()
+b.bark()
+c.bark()
+d.bark()
+
+*/
+
+/*
+
+class Car {
+  #make;
+
+  constructor(make, model) {
+    this.#make = make;
+    this.model = model;
+  }
+  startEngine() {
+    console.log (this.#make + " Durrrrrr")
+  }
+}
+
+
+
+const a = new Car("Toyota", "Corolla")
+
+a.startEngine();   
+console.log(a.model);
+console.log(a.#make);
+
+*/
+
+/*
+
+// inheritance - extends - super
+
+class Car {
+  constructor(make, model) {
+    this.make = make;
+    this.model = model;
+  }
+  startEngine() {
+    console.log (this.make + " durrrrrr")
+  }
+}
+
+class Auto extends Car {
+  constructor(make, model, year) {
+    super(make, model)
+    this.year = year
+  }
+
+  handGear() {
+    console.log ("Hand gear is the only option")
+  }
+}
+
+const auto = new Auto ("Bajaj", "Tuk Tuk", "2019");
+auto.handGear()
+auto.startEngine()
+console.log(auto.model)
+console.log(auto.year)
+
+*/
+
+/*
+
+// Task 1: Function Basics
+
+// Objective: Introduce students to JavaScript functions.
+
+// Create a simple JavaScript function named greet that takes a name as a parameter and returns a greeting message. 
+// For example, if the input is "Alice," the function should return "Hello, Alice!" Test the function with different names.
+
+function greet (name) {
+  return "Hello, " + name + "!"
+}
+
+console.log(greet("Kiruthika"))
+console.log(greet("Akilan"))
+
+*/
+
+/*
+
+// Task 2: Function Parameters and Return Values
+
+//Objective: Practice using parameters and return values in functions.
+
+//Write a function named calculateCircleArea that takes the radius of a circle as a parameter and returns its area. Test the function with different radius values.
+//Create another function named calculateTriangleArea that takes the base and height of a triangle as parameters and returns its area. Test the function with different values for base and height.
+
+// a = 3.141*(r ** 2)
+
+function calculateCircleArea(r) {
+  const a = Math.PI*(r ** 2);
+  return a;
+}
+
+function calculateTriangleArea(b, h) {
+  const a = (b * h) / 2;
+  return a;
+}
+
+const radius = 6;
+console.log(`The radius of the cirtcle is ${calculateCircleArea(radius)}.`)
+
+const base = 10;
+const height = 12;
+
+console.log(`The are of triangle area is ${calculateTriangleArea(base, height)}.`)
+
+*/
+
+// Task 3: Function Expressions
+
+// Objective: Introduce function expressions and anonymous functions.
+
+// Declare a variable multiply and assign it an anonymous function that takes two numbers as parameters and returns their product. 
+// Use this function to calculate the product of two numbers.
