@@ -577,9 +577,68 @@ console.log(`The are of triangle area is ${calculateTriangleArea(base, height)}.
 
 */
 
-// Task 3: Function Expressions
+/*
 
-// Objective: Introduce function expressions and anonymous functions.
+Task 3: Function Expressions
 
-// Declare a variable multiply and assign it an anonymous function that takes two numbers as parameters and returns their product. 
-// Use this function to calculate the product of two numbers.
+Objective: Introduce function expressions and anonymous functions.
+
+Declare a variable multiply and assign it an anonymous function that takes two numbers as parameters and returns their product. 
+Use this function to calculate the product of two numbers.
+
+function expression and anonymous function:
+*/
+
+/*
+
+let a = function() {
+  console.log();
+}
+
+//
+
+*/
+
+/*
+const multiply = function (a, b) {
+  return a * b
+}
+console.log (multiply(5, 6));
+*/
+
+/*
+
+Task 4: Classes and Objects
+
+Objective: Explore JavaScript classes and objects.
+
+Create a class named Person with properties for name, age, and email. 
+Implement a constructor to initialize these properties. 
+Create an instance of the Person class and display its properties.
+Add a method to the Person class called greet that returns a greeting message including the person's name. 
+Use this method to greet the person similar to the function that you created in task1
+
+*/
+
+/*
+
+class Person {
+  constructor(name, age, email) {
+    this.name = name;
+    this.age = age;
+    this.email = email;
+  }
+  greet() {
+    return "Hello " + this.name + "!"
+  }
+}
+
+const user = new Person("Kiruthika", 28, "kiruthika_test@gmail.com")
+
+console.log(user.name)
+console.log(user.age)
+console.log(user.email)
+
+console.log(user.greet())
+
+*/
