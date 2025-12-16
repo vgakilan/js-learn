@@ -664,6 +664,8 @@ Objective: Practice array manipulation and operations in JavaScript without usin
 
 */
 
+/*
+
 //1
 let numbers = [2, 4, 6, 8, 10];
 console.log(numbers)
@@ -673,3 +675,5 @@ let squaredNumber1 = numbers.map(num => num ** 2)
 console.log(squaredNumber1)
 
 //3
+
+*/
