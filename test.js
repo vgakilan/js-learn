@@ -608,13 +608,18 @@ console.log (multiply(5, 6));
 
 /*
 
+/*
+
 Task 4: Classes and Objects
 
 Objective: Explore JavaScript classes and objects.
 
+1. 
 Create a class named Person with properties for name, age, and email. 
 Implement a constructor to initialize these properties. 
 Create an instance of the Person class and display its properties.
+
+2. 
 Add a method to the Person class called greet that returns a greeting message including the person's name. 
 Use this method to greet the person similar to the function that you created in task1
 
@@ -642,3 +647,29 @@ console.log(user.email)
 console.log(user.greet())
 
 */
+
+/*
+
+Task 6: Array Operations (Advanced)
+
+Objective: Practice array manipulation and operations in JavaScript without using for loops.
+
+1. Create an array named numbers and initialize it with a sequence of numbers (e.g., [2, 4, 6, 8, 10]).
+2. Use the map method to create a new array named squaredNumbers. In this new array, each element should be the square of the corresponding element in the numbers array.
+3. Use the reduce method to calculate the sum of all numbers in the numbers array and store it in a variable called totalSum.
+4. Use the Math.max method to find the maximum value in the numbers array and store it in a variable called maxValue.
+5. Use the Math.min method to find the minimum value in the numbers array and store it in a variable called minValue.
+6. Display the squaredNumbers array, totalSum, maxValue, and minValue in the console.
+
+
+*/
+
+//1
+let numbers = [2, 4, 6, 8, 10];
+console.log(numbers)
+
+//2
+let squaredNumber1 = numbers.map(num => num ** 2)
+console.log(squaredNumber1)
+
+//3
