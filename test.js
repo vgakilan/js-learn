@@ -677,3 +677,112 @@ console.log(squaredNumber1)
 //3
 
 */
+
+// js-asynchronous: 
+
+
+/*
+
+function ringBell() {
+  console.log("Ding dong!");
+}
+
+ringBell()
+setTimeout(ringBell, 4000)
+
+*/
+
+/*
+
+function cleanRoom(callback) {
+  console.log("Cleaning room...");
+  callback();
+}
+
+cleanRoom(function () {
+  console.log("Mom! I'm done!");
+});
+
+*/
+
+/*
+
+function run(fn) {
+  fn();
+}
+
+function greet() {
+  console.log("Hello");
+}
+
+run(greet);
+
+*/
+
+/*
+
+function greet(name, callback) {
+  console.log("Hello, " + name);
+  callback();
+}
+
+function sayBye() {
+  console.log("Goodbye!");
+}
+
+greet("Akilan", sayBye);
+
+
+// 1. The greet function is called with two arguments:
+//    the string "Akilan" and the function sayBye (passed by reference).
+// 2. Inside greet, the name parameter receives "Akilan",
+//    so console.log("Hello, " + name) prints "Hello, Akilan".
+// 3. Then callback() is executed. Since callback refers to sayBye,
+//    this is equivalent to calling sayBye(), which prints "Goodbye!".
+//
+// Output:
+// Hello, Akilan
+// Goodbye!
+
+*/
+
+
+/*
+
+// fn = sayWelcome
+// fn() = sayWelcome()
+
+function sayHi(fn) {
+  console.log("Hi");
+  fn();
+}
+
+function sayWelcome() {
+  console.log("Welcome")
+}
+
+function sayBye() {
+  console.log("Bye")
+}
+
+*/
+
+
+/*
+
+sayHi(sayWelcome);
+// setTimeout(() => {
+//   sayWelcome();
+// }, 2000);
+
+sayBye();
+// a = 10
+// b = 20
+
+function addition(a, b) {
+  return a + b;
+}
+
+console.log(addition(10, 20));
+
+*/
