@@ -77,6 +77,32 @@ console.log(person.name);
 console.log(person.age);
 console.log(person.email); 
 */
+//funtions
 
+/*let user = 'kiruthika';
+let greet = 'Welcome';
+ console.log(`${greet} don ${user}!`);
+console.log(greet+ " " + user);
+
+let user1 = "Don Kiruthika"
+console.log(greet+ " " + user1);
+
+function checkAge(age){
+    if (age >=18){
+      return "you are an adult." ;   
+    }
+    else {
+
+      return "you are young.";    
+    }
+}
+let jeevitha_age = 30;
+let kiruthika_age = 17;
+ 
+ console.log(`Jeevitha is ${jeevitha_age}. So she is ${checkAge(jeevitha_age)}`);
+ console.log(`Kirurhika is ${kiruthika_age}.so  she is${checkAge(kiruthika_age)}`);
+ */
+ 
+ 
 
 
