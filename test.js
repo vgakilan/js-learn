@@ -916,6 +916,8 @@ p
 
 */
 
+/*
+
 let p = new Promise((resolve, reject) => {
   let arrived = true
   if (arrived) {
@@ -928,3 +930,17 @@ let p = new Promise((resolve, reject) => {
 p
 .then((rv) => console.log(rv))
 .catch((rn) => console.log(rn))
+
+*/
+
+/*
+
+// fetch
+
+document.getElementById('btn').addEventListener('click', function() {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
+})
+
+*/
