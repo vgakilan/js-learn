@@ -944,3 +944,11 @@ document.getElementById('btn').addEventListener('click', function() {
 })
 
 */
+
+// Async await
+
+async function fn() {
+  return 'Hello'
+}
+
+console.log(fn()) 
