@@ -765,6 +765,9 @@ function sayBye() {
   console.log("Bye")
 }
 
+sayHi(sayWelcome);
+sayBye();
+
 */
 
 
@@ -786,3 +789,142 @@ function addition(a, b) {
 console.log(addition(10, 20));
 
 */
+
+// Promise: 
+
+/*
+
+let promise = new Promise ((resolved, rejected) => {
+  if (condition)
+    resolved ("Promise is resolved")
+  else
+    rejected ("Unfortunately not")
+})
+
+*/
+
+/*
+
+// let random = Math.round(Math.random())
+// //let random = Math.random() * 10
+// console.log(random)
+
+
+let promise = new Promise ((resolve, reject) => {
+  let random = Math.round((Math.random()) * 10)
+  console.log(random)
+
+  if (random % 2 === 0) {
+    setTimeout (() => {resolve(random)}, 1000)
+  }
+  else
+    setTimeout (() => {reject(random)}, 1000)
+});
+
+promise
+  .then(console.log(promise))
+  .then(response => { console.log (response, 'Even')})
+  .catch(response => { console.log (response, 'Not Even!')})
+
+// random = 2
+// 2 % 2 === 0 ? after 1 sec resolve : after 1 sec reject
+
+//JSON
+
+let agent = `
+{
+  "messageCode": "",
+  "timestamp": "2025-12-19-10.39.41.741000",
+  "agents": [
+    {
+      "id": "75677",
+      "companyCode": "1",
+      "companyName": "NORRFINANS FÖRETAGSFÖRSÄKRING AB",
+      "address": {
+        "street": "MALMVÄGEN 5B",
+        "postalCode": "98130",
+        "city": "KIRUNA"
+      },
+      "phone": "0980-66960",
+      "fax": "0980-12500",
+      "email": "info@norrfinans.se",
+      "organisationNumber": "5565956496",
+      "category": "P75",
+      "type": "752",
+      "typeText": "Sak",
+      "fieldOfficeCode": "9100",
+      "costCenter": "4773",
+      "registrationDate": "2000-10-01",
+      "mainAgentId": "75677",
+      "paymentType": "3",
+      "clearingNumber": "9900",
+      "bankAccountNumber": "55717961",
+      "umbrellaCode": "03"
+    }
+  ],
+  "diagnostics": {
+    "errorNumber": "",
+    "errorText": "",
+    "sequenceNumber": "101",
+    "errorModuleName": "M11C200",
+    "callingModuleName": "M11C200",
+    "sqlCode": "0",
+    "logId": "2025-12-19-10.39.41.741000"
+  }
+}
+`
+
+//console.log(agent)
+console.log(typeof(agent))
+let agent_obj = JSON.parse(agent)
+console.log(agent_obj.timestamp)
+console.log(agent_obj)
+
+*/
+
+/*
+
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+*/
+/*
+const p = new Promise((resolve, reject) => {
+  // nothing here
+});
+
+p.then(v => console.log(v));
+*/
+
+/*
+
+
+let p = new Promise ((resolve, reject) => {
+  let arrived = true;
+  if (arrived) {
+    setTimeout(() => resolve("Arrived"), 1000)
+  }
+  else {
+    setTimeout(() =>reject("Not arrived"), 4000)
+  }
+})
+
+p
+.then((resolve) => console.log(resolve))
+.catch((reject) => console.log (reject))
+
+*/
+
+let p = new Promise((resolve, reject) => {
+  let arrived = true
+  if (arrived) {
+    setTimeout(() => resolve("Arrived"), 2000)
+  } else {
+    reject ("Not arrived")
+  }
+})
+
+p
+.then((rv) => console.log(rv))
+.catch((rn) => console.log(rn))
