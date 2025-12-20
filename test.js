@@ -947,8 +947,110 @@ document.getElementById('btn').addEventListener('click', function() {
 
 // Async await
 
-async function fn() {
-  return 'Hello'
+// Exercise 1 — Your first pause
+// Goal: Understand that await pauses a function.
+// Task:
+// Write an async function that:
+// Logs "Start"
+// Waits 1 second
+// Logs "End"
+
+/*
+async function async_learn() {
+  console.log("Start");
+  await new Promise((resolve) => setTimeout(resolve, 2000))
+  console.log("End")
 }
 
-console.log(fn()) 
+async_learn()
+*/
+
+
+/*
+async function async_learn() {
+  console.log("Start");
+
+  setTimeout(() => {
+    console.log("I ran while waiting");
+  }, 1000);
+
+  await new Promise(resolve => setTimeout(resolve, 3000));
+
+  console.log("End");
+}
+
+async_learn();
+*/
+
+/*
+
+// problem 2:
+
+async function sequential() {
+  console.log("A");
+  await new Promise (resolve => setTimeout(resolve, 1000))
+  console.log("B")
+  await new Promise (resolve => setTimeout(resolve, 1000))
+  console.log("C")
+}
+
+async function parallel() {
+  await Promise.all([
+    new Promise (resolve => setTimeout(resolve, 1000)),
+    new Promise (resolve => setTimeout(resolve, 1000))
+    ])
+  console.log("Done");
+}
+
+sequential();
+parallel();
+
+*/
+
+// Exercise 3 — Waiting for data, handling failure
+
+// Goal:
+
+// Learn how await + try / catch work together.
+
+// Task
+
+// 1. Create an async function called getNumber()
+
+// 2. Inside it:
+//      Wait 1 second
+//      Then randomly:
+//        resolve with the number 42
+//        or throw an error "Failed"
+//      Call the function and:
+//        If it succeeds, log "Success: 42"
+//        If it fails, log "Error: Failed"
+
+// Rules
+
+//    Use async / await
+//    Use try / catch
+//    Do not use .then() or .catch()
+//    Use setTimeout wrapped in a Promise
+
+async function getNumber() {
+  await new Promise (resolve => setTimeout(resolve, 1000))
+  if (Math.random() > 0.5) {
+    return "42"
+  } else {
+    throw new Error("Failed")
+  }
+}
+
+async function run() {
+  try {
+    const value = await getNumber();
+    console.log("Success", value)
+  }
+  catch (err){
+    console.log("Error:", err.message)
+  }
+}
+
+
+run();
