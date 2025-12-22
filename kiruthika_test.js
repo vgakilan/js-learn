@@ -103,6 +103,101 @@ let kiruthika_age = 17;
  console.log(`Kirurhika is ${kiruthika_age}.so  she is${checkAge(kiruthika_age)}`);
  */
  
- 
+ //let addition = function  (a,b)  {
+//return a+b;
+//}
+//let c = (10,20);
+//console.log(c)
+/*
+ let subtraction = function (a,b) {
+    return a-b;
+}
+let c = (500, 350);
+console.log(c)
+*/
+
+/*
+ let multiplication = function (a,b) {
+     return a*b;
+ }
+ let  c = multiplication (10,20);
+ console.log(c)
+ */
+
+//object with properties and arrays
+/*
+//let person = {
+   // name: ["Kiruthika", "Ganeshan"],
+    //age: 29,
+    //gender: "Female"
+}
+
+person.address = "Alta, Sweden"
+person.name.push('Nacka')
+person.birthYear = 1996;
+console.log(person)
+*/
+// includes means check the fruit is inside the the array
+//let fruits = ['apple', 'orange', 'kiwi'];
+//fruits.includes('orange');
+//console.log(fruits);
+
+//console.log(fruits.includes('orange'));  
+//console.log(fruits.includes('mango'));
 
 
+//Array methods
+
+//push-This vegetable only add in the end
+//let vegetables = ['tomato','onion','potato', 'chilli'];
+//vegetables.push('cabbage');
+//console.log(vegetables);
+
+// push() → adds an element to the end of an array
+//pop() → removes the last element from an array
+//shift() → removes the first element from an array
+//unshift() → adds an element to the beginning of an array
+
+//let fruits = ['apple', 'orange', 'kiwi']
+//fruits.push("pineapple");
+//console.log(fruits)
+
+//let fruits = ['apple', 'orange', 'kiwi','pineapple']
+//fruits.pop();
+//console.log(fruits)
+
+//fruits.unshift('grapes');
+//console.log(fruits);
+
+//fruits.shift(); 
+//console.log(fruits)
+
+
+//string and strings methods
+
+// let name = "kiruthika";
+
+// Length
+//console.log("Length:", name.length); 
+
+// Find index of 'u'
+//console.log("Index of 'u':", name.indexOf("u")); 
+
+// Check includes of 'k'
+//console.log("Includes 'k':", name.includes("k")); 
+
+//console.log(name.indexOf ('u'));
+//  Uppercase
+//console.log("Uppercase:", name.toUpperCase()); 
+
+// 5. Lowercase 
+//console.log("Lowercase:", name.toLowerCase()); 
+
+// 6. Substring (first 5 letters)
+//console.log("Substring (0,5):", name.substring(0, 5)); 
+
+// 7. Substr (from index 3, length 4)
+//console.log("Substr (3,4):", name.substr(3, 4)); 
+
+// 8. Split into letters
+//console.log("Split into letters:", name.split(""));
