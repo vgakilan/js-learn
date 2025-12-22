@@ -677,3 +677,380 @@ console.log(squaredNumber1)
 //3
 
 */
+
+// js-asynchronous: 
+
+
+/*
+
+function ringBell() {
+  console.log("Ding dong!");
+}
+
+ringBell()
+setTimeout(ringBell, 4000)
+
+*/
+
+/*
+
+function cleanRoom(callback) {
+  console.log("Cleaning room...");
+  callback();
+}
+
+cleanRoom(function () {
+  console.log("Mom! I'm done!");
+});
+
+*/
+
+/*
+
+function run(fn) {
+  fn();
+}
+
+function greet() {
+  console.log("Hello");
+}
+
+run(greet);
+
+*/
+
+/*
+
+function greet(name, callback) {
+  console.log("Hello, " + name);
+  callback();
+}
+
+function sayBye() {
+  console.log("Goodbye!");
+}
+
+greet("Akilan", sayBye);
+
+
+// 1. The greet function is called with two arguments:
+//    the string "Akilan" and the function sayBye (passed by reference).
+// 2. Inside greet, the name parameter receives "Akilan",
+//    so console.log("Hello, " + name) prints "Hello, Akilan".
+// 3. Then callback() is executed. Since callback refers to sayBye,
+//    this is equivalent to calling sayBye(), which prints "Goodbye!".
+//
+// Output:
+// Hello, Akilan
+// Goodbye!
+
+*/
+
+
+/*
+
+// fn = sayWelcome
+// fn() = sayWelcome()
+
+function sayHi(fn) {
+  console.log("Hi");
+  fn();
+}
+
+function sayWelcome() {
+  console.log("Welcome")
+}
+
+function sayBye() {
+  console.log("Bye")
+}
+
+sayHi(sayWelcome);
+sayBye();
+
+*/
+
+
+/*
+
+sayHi(sayWelcome);
+// setTimeout(() => {
+//   sayWelcome();
+// }, 2000);
+
+sayBye();
+// a = 10
+// b = 20
+
+function addition(a, b) {
+  return a + b;
+}
+
+console.log(addition(10, 20));
+
+*/
+
+// Promise: 
+
+/*
+
+let promise = new Promise ((resolved, rejected) => {
+  if (condition)
+    resolved ("Promise is resolved")
+  else
+    rejected ("Unfortunately not")
+})
+
+*/
+
+/*
+
+// let random = Math.round(Math.random())
+// //let random = Math.random() * 10
+// console.log(random)
+
+
+let promise = new Promise ((resolve, reject) => {
+  let random = Math.round((Math.random()) * 10)
+  console.log(random)
+
+  if (random % 2 === 0) {
+    setTimeout (() => {resolve(random)}, 1000)
+  }
+  else
+    setTimeout (() => {reject(random)}, 1000)
+});
+
+promise
+  .then(console.log(promise))
+  .then(response => { console.log (response, 'Even')})
+  .catch(response => { console.log (response, 'Not Even!')})
+
+// random = 2
+// 2 % 2 === 0 ? after 1 sec resolve : after 1 sec reject
+
+//JSON
+
+let agent = `
+{
+  "messageCode": "",
+  "timestamp": "2025-12-19-10.39.41.741000",
+  "agents": [
+    {
+      "id": "75677",
+      "companyCode": "1",
+      "companyName": "NORRFINANS FÖRETAGSFÖRSÄKRING AB",
+      "address": {
+        "street": "MALMVÄGEN 5B",
+        "postalCode": "98130",
+        "city": "KIRUNA"
+      },
+      "phone": "0980-66960",
+      "fax": "0980-12500",
+      "email": "info@norrfinans.se",
+      "organisationNumber": "5565956496",
+      "category": "P75",
+      "type": "752",
+      "typeText": "Sak",
+      "fieldOfficeCode": "9100",
+      "costCenter": "4773",
+      "registrationDate": "2000-10-01",
+      "mainAgentId": "75677",
+      "paymentType": "3",
+      "clearingNumber": "9900",
+      "bankAccountNumber": "55717961",
+      "umbrellaCode": "03"
+    }
+  ],
+  "diagnostics": {
+    "errorNumber": "",
+    "errorText": "",
+    "sequenceNumber": "101",
+    "errorModuleName": "M11C200",
+    "callingModuleName": "M11C200",
+    "sqlCode": "0",
+    "logId": "2025-12-19-10.39.41.741000"
+  }
+}
+`
+
+//console.log(agent)
+console.log(typeof(agent))
+let agent_obj = JSON.parse(agent)
+console.log(agent_obj.timestamp)
+console.log(agent_obj)
+
+*/
+
+/*
+
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+*/
+/*
+const p = new Promise((resolve, reject) => {
+  // nothing here
+});
+
+p.then(v => console.log(v));
+*/
+
+/*
+
+
+let p = new Promise ((resolve, reject) => {
+  let arrived = true;
+  if (arrived) {
+    setTimeout(() => resolve("Arrived"), 1000)
+  }
+  else {
+    setTimeout(() =>reject("Not arrived"), 4000)
+  }
+})
+
+p
+.then((resolve) => console.log(resolve))
+.catch((reject) => console.log (reject))
+
+*/
+
+/*
+
+let p = new Promise((resolve, reject) => {
+  let arrived = true
+  if (arrived) {
+    setTimeout(() => resolve("Arrived"), 2000)
+  } else {
+    reject ("Not arrived")
+  }
+})
+
+p
+.then((rv) => console.log(rv))
+.catch((rn) => console.log(rn))
+
+*/
+
+/*
+
+// fetch
+
+document.getElementById('btn').addEventListener('click', function() {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
+})
+
+*/
+
+// Async await
+
+// Exercise 1 — Your first pause
+// Goal: Understand that await pauses a function.
+// Task:
+// Write an async function that:
+// Logs "Start"
+// Waits 1 second
+// Logs "End"
+
+/*
+async function async_learn() {
+  console.log("Start");
+  await new Promise((resolve) => setTimeout(resolve, 2000))
+  console.log("End")
+}
+
+async_learn()
+*/
+
+
+/*
+async function async_learn() {
+  console.log("Start");
+
+  setTimeout(() => {
+    console.log("I ran while waiting");
+  }, 1000);
+
+  await new Promise(resolve => setTimeout(resolve, 3000));
+
+  console.log("End");
+}
+
+async_learn();
+*/
+
+/*
+
+// problem 2:
+
+async function sequential() {
+  console.log("A");
+  await new Promise (resolve => setTimeout(resolve, 1000))
+  console.log("B")
+  await new Promise (resolve => setTimeout(resolve, 1000))
+  console.log("C")
+}
+
+async function parallel() {
+  await Promise.all([
+    new Promise (resolve => setTimeout(resolve, 1000)),
+    new Promise (resolve => setTimeout(resolve, 1000))
+    ])
+  console.log("Done");
+}
+
+sequential();
+parallel();
+
+*/
+
+// Exercise 3 — Waiting for data, handling failure
+
+// Goal:
+
+// Learn how await + try / catch work together.
+
+// Task
+
+// 1. Create an async function called getNumber()
+
+// 2. Inside it:
+//      Wait 1 second
+//      Then randomly:
+//        resolve with the number 42
+//        or throw an error "Failed"
+//      Call the function and:
+//        If it succeeds, log "Success: 42"
+//        If it fails, log "Error: Failed"
+
+// Rules
+
+//    Use async / await
+//    Use try / catch
+//    Do not use .then() or .catch()
+//    Use setTimeout wrapped in a Promise
+
+async function getNumber() {
+  await new Promise (resolve => setTimeout(resolve, 1000))
+  if (Math.random() > 0.5) {
+    return "42"
+  } else {
+    throw new Error("Failed")
+  }
+}
+
+async function run() {
+  try {
+    const value = await getNumber();
+    console.log("Success", value)
+  }
+  catch (err){
+    console.log("Error:", err.message)
+  }
+}
+
+
+run();
