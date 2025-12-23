@@ -1033,6 +1033,8 @@ parallel();
 //    Do not use .then() or .catch()
 //    Use setTimeout wrapped in a Promise
 
+/*
+
 async function getNumber() {
   await new Promise (resolve => setTimeout(resolve, 1000))
   if (Math.random() > 0.5) {
@@ -1054,3 +1056,6 @@ async function run() {
 
 
 run();
+
+*/
+
