@@ -1058,4 +1058,141 @@ async function run() {
 run();
 
 */
+/*
+
+function greet(name) {
+  return "Hello " + name + "!"
+}
+
+console.log(greet("Kiruthika"))
+
+*/
+
+/*
+
+function calculateCircleArea(radius) {
+  return (Math.PI) * (radius ** 2)
+}
+
+let radius = 4;
+console.log(calculateCircleArea(radius))
+
+*/
+
+/*
+
+function calculateTriangleArea(base, height) {
+  return 0.5 * base * height
+}
+
+console.log(calculateTriangleArea(5, 10))
+
+*/
+
+/*
+
+multiply = (a, b) => { return a * b}
+
+console.log(multiply(2, 3))
+
+*/
+/*
+
+multiply = function (a, b) {
+  return a * b;
+}
+
+console.log(multiply(2, 3))
+
+*/
+
+/*
+const multiply = (a, b) => a * b
+
+console.log(multiply(2, 5))
+
+*/
+
+/*
+
+class Person {
+  constructor(name, age, email) {
+    this.name = name;
+    this.age = age;
+    this.email = email;
+  }
+  greet() {
+    return "Hello " + this.name + "!"
+  }
+}
+
+class Student extends Person {
+  constructor(name, age,email, studentID) {
+    super(name, age, email)
+    this.studentID = studentID
+  }
+}
+
+let person = new Person("kiruthika","28", "kirthika.test@gmail.com");
+let student = new Student("kiruthika","28", "kirthika.test@gmail.com", "kiga0001")
+console.log(person.name)
+console.log(person.age)
+console.log(person.email)
+
+console.log(person.greet())
+console.log(student.name)
+console.log(student.age)
+console.log(student.email)
+console.log(student.studentID)
+
+*/
+
+/*
+
+let numbers = [2, 4, 6, 8, 10];
+
+let new_numbers = numbers.map((x) => x * 1);
+
+console.log(numbers)
+console.log(new_numbers)
+
+*/
+
+/*
+
+let numbers = [2, 4, 6, 8, 10];
+
+let squaredNumebrs = numbers.map((x) => x ** 2)
+//[4, 8. 12, 16, 20]
+//console.log(new_numbers)
+
+
+
+// let numbers = [2, 4, 6, 8, 10];
+let totalSum = numbers.reduce(((acc, current) => acc + current), 0)
+
+// let totalSum = numbers.reduce(function(acc, current) {
+//   return acc + current
+// }, 0)
+
+// let totalSum = numbers.reduce((acc, current) => {
+//   return acc + current
+// }, 0)
+
+// console.log(totalSum)
+
+
+
+
+// Maximum and Minimum value
+
+maxValue = Math.max(...numbers)
+minvalue = Math.min(...numbers)
+
+console.log(squaredNumebrs)
+console.log(totalSum)
+console.log(maxValue)
+console.log(minvalue)
+
+*/
 
